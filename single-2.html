@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>San Pedro Sula City Highlights – Maya Temple Tours</title>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -18,7 +18,7 @@
       --mtt-font-size-2xs: 0.6875rem; --mtt-font-size-xs: 0.75rem; --mtt-font-size-sm: 0.8125rem;
       --mtt-font-size-base: 0.875rem; --mtt-font-size-md: 0.9375rem; --mtt-font-size-lg: 1rem;
       --mtt-font-size-xl: 1.0625rem; --mtt-font-size-2xl: 1.1875rem; --mtt-font-size-3xl: 1.375rem;
-      --mtt-font-size-4xl: 1.5rem; --mtt-font-size-title: 2.25rem;
+      --mtt-font-size-4xl: 1.5rem; --mtt-font-size-title: 2rem;
       --mtt-font-weight-regular: 400; --mtt-font-weight-medium: 500;
       --mtt-font-weight-semibold: 600; --mtt-font-weight-bold: 700;
       --mtt-line-height-tight: 1.2; --mtt-line-height-normal: 1.5;
@@ -28,10 +28,11 @@
       --mtt-color-blue: #2BA6DE; --mtt-color-blue-70: #69C1E8; --mtt-color-blue-light: #ddf0fb;
       --mtt-color-yellow: #FCE000; --mtt-color-yellow-light: #fffbe0;
       --mtt-color-white: #FFFFFF; --mtt-color-black: #1a1a1a;
+      --mtt-color-whatsapp: #25D366; --mtt-color-whatsapp-hover: #1ebe5d;
       --mtt-color-text: var(--mtt-color-black); --mtt-color-muted: var(--mtt-color-gray);
       --mtt-color-subtle: var(--mtt-color-gray-50); --mtt-color-border: var(--mtt-color-gray-light);
       --mtt-color-accent: var(--mtt-color-blue); --mtt-color-accent-hover: #1f8fbf;
-      --mtt-container-max: 1200px; --mtt-nav-height: 72px;
+      --mtt-container-max: 1400px; --mtt-nav-height: 72px;
       --mtt-section-py: 72px; --mtt-section-py-sm: 48px;
       --mtt-container-px: 40px; --mtt-container-px-sm: 20px;
       --mtt-space-1: 4px; --mtt-space-2: 8px; --mtt-space-3: 12px; --mtt-space-4: 16px;
@@ -53,8 +54,31 @@
     ul, ol { list-style: none; }
     button { cursor: pointer; font-family: inherit; }
 
+    /* ── SECTION LABELS ── */
     .section-label { display: inline-flex; align-items: center; gap: var(--mtt-space-2); font-size: var(--mtt-font-size-xs); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; color: var(--mtt-color-accent); margin-bottom: var(--mtt-gap-md); }
     .section-label::before { content: ''; display: inline-block; width: 18px; height: 3px; background: var(--mtt-color-yellow); border-radius: var(--mtt-radius-pill); }
+
+    /* Subtítulo más grande para uso dentro del tour-body-card */
+    .section-label-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--mtt-space-3);
+      font-size: var(--mtt-font-size-lg);
+      font-weight: var(--mtt-font-weight-bold);
+      letter-spacing: var(--mtt-letter-spacing-label);
+      text-transform: uppercase;
+      color: var(--mtt-color-accent);
+      margin-bottom: var(--mtt-gap-md);
+    }
+    .section-label-lg::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 3px;
+      background: var(--mtt-color-yellow);
+      border-radius: var(--mtt-radius-pill);
+      flex-shrink: 0;
+    }
 
     /* ── TOPBAR ── */
     .topbar { background: var(--mtt-color-accent); color: var(--mtt-color-white); }
@@ -76,20 +100,21 @@
     .mobile-topbar-socials i { display: flex; }
     @media (max-width: 768px) { .mobile-topbar { display: block; } }
 
-    .header-section { background: var(--mtt-color-white); }
-    .header-container { max-width: var(--mtt-container-max); margin: 0 auto; padding: 14px var(--mtt-container-px); display: flex; align-items: center; justify-content: space-between; gap: var(--mtt-gap-lg); }
+    /* ── HEADER ── */
+    .header-section { background: var(--mtt-color-white);}
+    .header-container { max-width: var(--mtt-container-max); margin: 0 auto; padding: 14px var(--mtt-container-px); display: flex; align-items: center; justify-content: space-between; gap: var(--mtt-gap-lg); border: none; }
     .header-right { display: flex; align-items: center; gap: var(--mtt-gap-md); }
     .header-logo  { display: flex; align-items: center; flex-shrink: 0; }
-    .header-logo img { height: 62px; }
+    .header-logo img { height: 76px; }
     .header-nav   { display: flex; align-items: center; gap: var(--mtt-gap-md); }
-    .header-nav a { font-size: var(--mtt-font-size-xl); font-weight: var(--mtt-font-weight-semibold); color: var(--mtt-color-gray); padding: var(--mtt-space-1) 0; position: relative; }
+    .header-nav a { font-size: var(--mtt-font-size-2xl); font-weight: var(--mtt-font-weight-semibold); color: var(--mtt-color-gray); padding: var(--mtt-space-1) 0; position: relative; }
     .header-nav a.active, .header-nav a:hover { color: var(--mtt-color-accent); }
     .header-nav a::after { content:''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--mtt-color-yellow); transition: width var(--mtt-transition); }
     .header-nav a:hover::after, .header-nav a.active::after { width: 100%; }
     .nav-arrow::after { content: ' \25BE'; font-size: var(--mtt-font-size-2xs); }
     .btn-book { background: var(--mtt-color-blue-light); color: var(--mtt-color-blue); padding: 10px 22px; border-radius: var(--mtt-radius-pill); font-size: var(--mtt-font-size-sm); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-btn); text-transform: uppercase; white-space: nowrap; display: inline-block; border: none; }
     .mobile-menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: var(--mtt-space-1); }
-    .mobile-menu-toggle span { display: block; width: 24px; height: 2px; background: var(--mtt-color-black); border-radius: var(--mtt-radius-xs); }
+    .mobile-menu-toggle span { display: block; width: 24px; height: 2px; background: var(--mtt-color-gray); border-radius: var(--mtt-radius-xs); }
     .mobile-nav-drawer { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--mtt-color-accent); z-index: 200; padding: var(--mtt-space-10) var(--mtt-space-8); overflow-y: auto; transform: translateX(100%); opacity: 0; visibility: hidden; transition: transform .35s cubic-bezier(.4,0,.2,1), opacity .3s ease, visibility .35s; }
     .mobile-nav-drawer.open { transform: translateX(0); opacity: 1; visibility: visible; }
     .mobile-nav-drawer-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--mtt-space-12); }
@@ -112,277 +137,40 @@
     @media (max-width: 768px) {
       .header-nav, .btn-book { display: none; }
       .mobile-menu-toggle { display: flex; }
+      .header-logo img { height: 56px;}
     }
 
-    /* ══════════════════════════════════════════════════════
-       HERO CAROUSEL — OPCIÓN 3: Full-width cinematic
-       ══════════════════════════════════════════════════════ */
-
-    .hero-carousel {
-      position: relative;
-      width: 100%;
-      height: 540px;
-      overflow: hidden;
-      background: var(--mtt-color-black);
-    }
-
-    /* Slides track */
-    .hc-track {
-      display: flex;
-      height: 100%;
-      transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1);
-      will-change: transform;
-    }
-
-    .hc-slide {
-      position: relative;
-      min-width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .hc-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transform: scale(1.04);
-      transition: transform 8s ease;
-    }
-
-    /* Ken Burns al slide activo */
-    .hc-slide.active img {
-      transform: scale(1);
-    }
-
-    /* Gradiente overlay — más profundo abajo para el contenido */
-    .hc-slide::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to top,  rgba(10, 30, 50, 0.82) 0%, rgba(10,30,50,0.3) 45%, transparent 70%),
-        linear-gradient(to right, rgba(10, 30, 50, 0.45) 0%, transparent 55%);
-      pointer-events: none;
-    }
-
-    /* ── Contenido encima del slide ── */
-    .hc-content {
-      position: absolute;
-      bottom: 112px; /* deja espacio para los thumbs */
-      left: 0;
-      right: 0;
-      padding: 0 var(--mtt-container-px);
-      max-width: var(--mtt-container-max);
-      margin: 0 auto;
-      z-index: 4;
-      /* Las animaciones de entrada se aplican via JS */
-    }
-
-    .hc-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--mtt-space-2);
-      font-size: var(--mtt-font-size-2xs);
-      font-weight: var(--mtt-font-weight-bold);
-      letter-spacing: var(--mtt-letter-spacing-label);
-      text-transform: uppercase;
-      color: var(--mtt-color-yellow);
-      margin-bottom: var(--mtt-space-3);
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
-    }
-    .hc-tag::before {
-      content: '';
-      display: inline-block;
-      width: 14px; height: 3px;
-      background: var(--mtt-color-yellow);
-      border-radius: var(--mtt-radius-pill);
-    }
-
-    .hc-title {
-      font-family: var(--mtt-font-title);
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: var(--mtt-font-weight-medium);
-      color: var(--mtt-color-white);
-      line-height: var(--mtt-line-height-tight);
-      margin-bottom: var(--mtt-space-3);
-      max-width: 560px;
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.55s ease 0.22s, transform 0.55s ease 0.22s;
-    }
-
-    .hc-caption {
-      font-size: var(--mtt-font-size-md);
-      color: rgba(255,255,255,0.75);
-      max-width: 400px;
-      line-height: var(--mtt-line-height-relaxed);
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease 0.34s, transform 0.5s ease 0.34s;
-    }
-
-    /* Cuando el slide es activo, revelar el contenido */
-    .hc-slide.active .hc-tag,
-    .hc-slide.active .hc-title,
-    .hc-slide.active .hc-caption {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── Controles de navegación (flechas) ── */
-    .hc-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-60%); /* compensa los thumbs de abajo */
-      z-index: 5;
-      width: 48px; height: 48px;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%;
-      color: var(--mtt-color-white);
-      font-size: 18px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
+    /* ── HERO CAROUSEL ── */
+    .hero-carousel { position: relative; width: 100%; height: 540px; overflow: hidden; background: var(--mtt-color-black); }
+    .hc-track { display: flex; height: 100%; transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1); will-change: transform; }
+    .hc-slide { position: relative; min-width: 100%; height: 100%; overflow: hidden; }
+    .hc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.04); transition: transform 8s ease; }
+    .hc-slide.active img { transform: scale(1); }
+    .hc-slide::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 30, 50, 0.82) 0%, rgba(10,30,50,0.3) 45%, transparent 70%), linear-gradient(to right, rgba(10, 30, 50, 0.45) 0%, transparent 55%); pointer-events: none; }
+    .hc-content { position: absolute; bottom: 112px; left: 0; right: 0; padding: 0 var(--mtt-container-px); max-width: var(--mtt-container-max); margin: 0 auto; z-index: 4; }
+    .hc-tag { display: inline-flex; align-items: center; gap: var(--mtt-space-2); font-size: var(--mtt-font-size-2xs); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; color: var(--mtt-color-yellow); margin-bottom: var(--mtt-space-3); opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s; }
+    .hc-tag::before { content: ''; display: inline-block; width: 14px; height: 3px; background: var(--mtt-color-yellow); border-radius: var(--mtt-radius-pill); }
+    .hc-title { font-family: var(--mtt-font-title); font-size: clamp(1.8rem, 4vw, 1.8rem); font-weight: var(--mtt-font-weight-medium); color: var(--mtt-color-white); line-height: var(--mtt-line-height-tight); margin-bottom: var(--mtt-space-3); opacity: 0; transform: translateY(14px); transition: opacity 0.55s ease 0.22s, transform 0.55s ease 0.22s; }
+    .hc-caption { font-size: var(--mtt-font-size-md); color: rgba(255,255,255,0.75); line-height: var(--mtt-line-height-relaxed); opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease 0.34s, transform 0.5s ease 0.34s; }
+    .hc-slide.active .hc-tag, .hc-slide.active .hc-title, .hc-slide.active .hc-caption { opacity: 1; transform: translateY(0); }
+    .hc-arrow { position: absolute; top: 50%; transform: translateY(-60%); z-index: 5; width: 48px; height: 48px; background: rgba(255,255,255,0.12); backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; color: var(--mtt-color-white); font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, transform 0.2s; }
     .hc-arrow i { display: flex; }
-    .hc-arrow:hover {
-      background: var(--mtt-color-accent);
-      border-color: var(--mtt-color-accent);
-      transform: translateY(-60%) scale(1.08);
-    }
+    .hc-arrow:hover { background: var(--mtt-color-accent); border-color: var(--mtt-color-accent); transform: translateY(-60%) scale(1.08); }
     .hc-arrow-prev { left: var(--mtt-container-px); }
     .hc-arrow-next { right: var(--mtt-container-px); }
-
-    /* ── Barra inferior: thumbnails + counter + progress ── */
-    .hc-bar {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 90px;
-      background: rgba(255,255,255,0.01);
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      z-index: 5;
-      display: flex;
-      align-items: center;
-      padding: 0 var(--mtt-container-px);
-      gap: var(--mtt-gap-md);
-    }
-
-    /* Thumbnails */
-    .hc-thumbs {
-      display: flex;
-      gap: var(--mtt-space-3);
-      flex: 1;
-    }
-
-    .hc-thumb {
-      position: relative;
-      width: 80px;
-      height: 56px;
-      border-radius: var(--mtt-radius-sm);
-      overflow: hidden;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: border-color 0.25s, transform 0.2s;
-      flex-shrink: 0;
-    }
-    .hc-thumb img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
+    .hc-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 90px; background: rgba(255,255,255,0.01); backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px); border-top: 1px dashed rgba(255,255,255,0.08); z-index: 5; display: flex; align-items: center; padding: 0 var(--mtt-container-px); gap: var(--mtt-gap-md); }
+    .hc-thumbs { display: flex; gap: var(--mtt-space-3); flex: 1; }
+    .hc-thumb { position: relative; width: 80px; height: 56px; border-radius: var(--mtt-radius-sm); overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: border-color 0.25s, transform 0.2s; flex-shrink: 0; }
+    .hc-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
     .hc-thumb:hover { transform: translateY(-2px); }
     .hc-thumb:hover img { transform: scale(1.08); }
-    .hc-thumb.active {
-      border-color: var(--mtt-color-yellow);
-    }
-    .hc-thumb.active::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(252, 224, 0, 0.15);
-    }
+    .hc-thumb.active { border-color: var(--mtt-color-yellow); }
+    .hc-thumb.active::after { content: ''; position: absolute; inset: 0; background: rgba(252, 224, 0, 0.15); }
+    .hc-bar-sep { width: 1px; height: 44px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+    .hc-counter { display: flex; flex-direction: row; align-items: center; gap: 6px; flex-shrink: 0; }
+    .hc-counter-current { font-family: var(--mtt-font-title); font-size: var(--mtt-font-size-3xl); color: var(--mtt-color-yellow); line-height: 1; }
+    .hc-counter-total { font-size: var(--mtt-font-size-xs); color: rgba(255,255,255,0.5); letter-spacing: 1px; }
 
-    /* Separador vertical */
-    .hc-bar-sep {
-      width: 1px;
-      height: 44px;
-      background: rgba(255,255,255,0.15);
-      flex-shrink: 0;
-    }
-
-    /* Counter */
-    .hc-counter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      flex-shrink: 0;
-    }
-    .hc-counter-current {
-      font-family: var(--mtt-font-title);
-      font-size: var(--mtt-font-size-3xl);
-      color: var(--mtt-color-yellow);
-      line-height: 1;
-    }
-    .hc-counter-total {
-      font-size: var(--mtt-font-size-2xs);
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 1px;
-    }
-
-    /* Progress bar autoplay */
-    .hc-progress-wrap {
-      flex-shrink: 0;
-      width: 80px;
-      display: flex;
-      flex-direction: column;
-      gap: var(--mtt-space-2);
-    }
-    .hc-progress-label {
-      font-size: var(--mtt-font-size-2xs);
-      color: rgba(255,255,255,0.45);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .hc-progress-track {
-      height: 3px;
-      background: rgba(255,255,255,0.15);
-      border-radius: var(--mtt-radius-pill);
-      overflow: hidden;
-    }
-    .hc-progress-fill {
-      height: 100%;
-      background: var(--mtt-color-yellow);
-      border-radius: var(--mtt-radius-pill);
-      width: 0%;
-      transition: width linear;
-    }
-
-    /* Pausa indicator */
-    .hc-pause-pill {
-      display: none;
-      align-items: center;
-      gap: var(--mtt-space-2);
-      background: rgba(255,255,255,0.1);
-      border-radius: var(--mtt-radius-pill);
-      padding: var(--mtt-space-1) var(--mtt-space-3);
-      font-size: var(--mtt-font-size-2xs);
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      flex-shrink: 0;
-    }
-    .hc-pause-pill.visible { display: flex; }
-    .hc-pause-pill i { display: flex; font-size: 9px; }
-
-    /* ── Responsive ── */
     @media (max-width: 1024px) {
       .hero-carousel { height: 480px; }
       .hc-content { padding: 0 var(--mtt-container-px-sm); bottom: 100px; }
@@ -394,7 +182,6 @@
       .hero-carousel { height: 420px; }
       .hc-arrow { width: 38px; height: 38px; font-size: 15px; }
       .hc-thumb { width: 60px; height: 44px; }
-      .hc-progress-wrap, .hc-bar-sep:last-of-type, .hc-pause-pill { display: none !important; }
       .hc-bar { height: 72px; gap: var(--mtt-space-4); }
     }
     @media (max-width: 480px) {
@@ -406,93 +193,377 @@
       .hc-thumb { width: 52px; height: 38px; }
     }
 
-    /* ── MAIN LAYOUT (idéntico) ── */
-    .tour-page-section { padding: var(--mtt-section-py) 0; }
+    /* ── MAIN LAYOUT ── */
+    .tour-page-section { padding: var(--mtt-container-px) 0 var(--mtt-section-py); }
     .tour-page-container { max-width: var(--mtt-container-max); margin: 0 auto; padding: 0 var(--mtt-container-px); display: grid; grid-template-columns: 1fr 340px; gap: var(--mtt-gap-xl); }
-    .tour-content { display: flex; flex-direction: column; gap: var(--mtt-gap-xl); align-self: start; }
-    .tour-category-tag { display: inline-flex; align-items: center; gap: var(--mtt-space-2); font-size: var(--mtt-font-size-2xs); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; color: var(--mtt-color-blue-light); background: var(--mtt-color-blue); border-radius: var(--mtt-radius-pill); padding: var(--mtt-space-2) var(--mtt-space-4); margin-bottom: var(--mtt-gap-md); }
-    .tour-title { font-family: var(--mtt-font-title); font-size: var(--mtt-font-size-title); font-weight: var(--mtt-font-weight-medium); color: var(--mtt-color-blue); margin-bottom: var(--mtt-gap-sm); }
-    .tour-tagline { font-size: var(--mtt-font-size-2xl); color: var(--mtt-color-muted); line-height: var(--mtt-line-height-loose); max-width: 620px; }
-    .tour-meta-bar { display: flex; align-items: center; gap: var(--mtt-gap-sm); margin-top: var(--mtt-gap-md); flex-wrap: wrap; }
-    .meta-item { display: flex; align-items: center; gap: var(--mtt-space-2); font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); background: var(--mtt-color-white); padding: var(--mtt-space-2) var(--mtt-space-4); border-radius: var(--mtt-radius-pill); }
-    .meta-item strong { color: var(--mtt-color-muted); font-weight: var(--mtt-font-weight-bold); }
-    .content-divider { border: none; border-top: 1px dashed var(--mtt-color-border); }
-    .stops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mtt-space-4); }
-    .stop-card { border-radius: var(--mtt-radius-md); padding: var(--mtt-space-6); background: var(--mtt-color-white); border: 1px dashed var(--mtt-color-border); }
+    .tour-content { display: flex; flex-direction: column; gap: var(--mtt-gap-md); align-self: start; }
+
+    /* ── POSTCARD ── */
+    .postcard { width: 100%; position: relative; border-radius: var(--mtt-radius-md); overflow: hidden; border: 1px dashed var(--mtt-color-border); }
+    .postcard-border { position: absolute; inset: 0; border-radius: var(--mtt-radius-md); z-index: 0; }
+    .postcard-inner { position: relative; border-radius: 4px; background: var(--mtt-color-white); z-index: 1; display: flex; min-height: 340px; }
+    .pc-left { flex: 1; padding: 28px 24px 28px 26px; display: flex; flex-direction: column; gap: 0; position: relative; z-index: 2; }
+    .badge { display: inline-flex; align-items: center; gap: 5px; background: var(--mtt-color-blue-light); color: var(--mtt-color-blue); font-size: var(--mtt-font-size-xs); font-weight: var(--mtt-font-weight-semibold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; padding: 5px 13px; border-radius: var(--mtt-radius-pill); width: fit-content; margin-bottom: 14px; }
+    .pc-title { font-family: var(--mtt-font-title); font-size: var(--mtt-font-size-title); font-weight: var(--mtt-font-weight-medium); color: var(--mtt-color-blue); margin-bottom: var(--mtt-gap-sm); }
+    .pc-lines-wrap { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; }
+    .pc-line-text { height: 100%; min-height: 100%; display: block; font-size: var(--mtt-font-size-2xl); color: var(--mtt-color-muted); line-height: 2rem; background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(2rem - 1px), var(--mtt-color-border) calc(2rem - 1px), var(--mtt-color-border) 2rem); background-size: 100% 2rem; background-position: 0 0; }
+    .pc-divider { width: 1px; flex-shrink: 0; z-index: 2; background: repeating-linear-gradient(to bottom, var(--mtt-color-gray-light) 0px, var(--mtt-color-gray-light) 5px, transparent 5px, transparent 11px); }
+    .pc-right { width: 230px; flex-shrink: 0; padding: 22px 22px 26px 20px; display: flex; flex-direction: column; position: relative; z-index: 2; }
+    .pc-stamp { display: flex; justify-content: flex-end; margin-bottom: auto; }
+    .pc-stamp svg { width: 75px; height: 75px; }
+    .pc-info-blocks { display: flex; flex-direction: column; gap: 20px; margin-top: 20px; }
+    .pc-info-block { display: flex; flex-direction: column; gap: 10px; }
+    .pc-info-label { font-size: var(--mtt-font-size-md); color: var(--mtt-color-gray); font-weight: var(--mtt-font-weight-bold); }
+    .pc-info-rule { width: 100%; border: none; border-bottom: 1px solid var(--mtt-color-border); height: 20px; display: flex; align-items: flex-end; padding-bottom: 3px; }
+    .pc-info-value { font-size: var(--mtt-font-size-md); color: var(--mtt-color-gray); }
+    .pc-brand-stamp { position: absolute; top: 35%; right: 50px; transform: translateY(-50%) rotate(-15deg); width: 120px; height: 120px; opacity: 0.15; z-index: 10; pointer-events: none; }
+    .pc-brand-stamp svg { width: 100%; height: 100%; }
+
+    @media (max-width: 580px) {
+      .postcard-inner { flex-direction: column; }
+      .pc-divider { display: none; }
+      .pc-line-text { font-size: var(--mtt-font-size-xl); }
+      .pc-info-rule { border-bottom: none; }
+      .pc-right { width: 100%; padding: 18px 22px 24px 22px; }
+      .pc-stamp { display: none; }
+      .pc-info-blocks { flex-direction: row; gap: 16px; margin-top: 0; }
+      .pc-info-block { flex: 1; }
+      .pc-left { padding: 22px 22px 20px 22px; }
+    }
+
+    /* ── TOUR BODY CARD — contenedor blanco unificado ── */
+    .tour-body-card {
+      background: var(--mtt-color-white);
+      border: 1px dashed var(--mtt-color-border);
+      border-radius: var(--mtt-radius-md);
+      padding: var(--mtt-space-10);
+      display: flex;
+      flex-direction: column;
+      gap: var(--mtt-gap-xl);
+    }
+
+    .tour-body-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* stops-grid sin borde propio — el card padre los contiene */
+    .stops-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--mtt-space-4);
+    }
+
+    .stop-card { padding: var(--mtt-space-4) var(--mtt-space-4) var(--mtt-space-4) 0; }
     .stop-card-icon { width: 44px; height: 44px; background: var(--mtt-color-yellow); border-radius: var(--mtt-radius-sm); margin-bottom: var(--mtt-space-4); display: flex; align-items: center; justify-content: center; font-size: var(--mtt-font-size-lg); color: var(--mtt-color-blue); }
+    .stop-card-icon i { display: flex; }
     .stop-card h3 { font-size: var(--mtt-font-size-xl); font-weight: var(--mtt-font-weight-bold); color: var(--mtt-color-blue); margin-bottom: var(--mtt-space-1); }
-    .stop-card p { font-size: var(--mtt-font-size-md); line-height: var(--mtt-line-height-relaxed); color: var(--mtt-color-muted); }
-    .info-list { display: flex; flex-direction: column; gap: var(--mtt-space-3); }
+    .stop-card p { font-size: var(--mtt-font-size-xl); line-height: var(--mtt-line-height-relaxed); color: var(--mtt-color-muted); }
+
+    /* info-list sin caja propia */
+    .info-list { display: flex; flex-direction: column; gap: var(--mtt-space-2); }
     .info-list li { font-size: var(--mtt-font-size-lg); line-height: var(--mtt-line-height-normal); color: var(--mtt-color-muted); display: flex; align-items: flex-start; gap: var(--mtt-space-3); }
     .info-list li i { font-size: var(--mtt-font-size-lg); color: var(--mtt-color-accent); flex-shrink: 0; margin-top: 2px; }
+
+    .main-2col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mtt-gap-xl); align-items: start; }
+
+    /* ── SIDEBAR ── */
     .sidebar-sticky-wrap { position: sticky; top: 20px; display: flex; flex-direction: column; gap: var(--mtt-gap-md); }
-    .sidebar-card { background: var(--mtt-color-white); border-radius: var(--mtt-radius-md); border: 1px dashed var(--mtt-color-border); overflow: hidden; }
-    .sidebar-card-icon-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: var(--mtt-space-2); padding: var(--mtt-space-6); padding-bottom: 18px; }
+    .sidebar-card { position: relative; background-color: var(--mtt-color-white); border: 1px dashed var(--mtt-color-border); border-radius: 0 var(--mtt-radius-md) var(--mtt-radius-md) var(--mtt-radius-md); overflow: visible; }
+    .sidebar-card::before { content: ""; position: absolute; top: -1px; left: -1px; border-left: 40px solid var(--mtt-color-gray-soft); border-bottom: 40px solid transparent; box-shadow: 3px 3px 3px rgba(0,0,0,0.12); z-index: 1; }
+    .sidebar-card-icon-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--mtt-space-2); padding: var(--mtt-space-6); padding-bottom: 18px; }
     .sidebar-card-icon-wrap .card-icon { display: flex; align-items: center; justify-content: center; color: var(--mtt-color-accent); font-size: 42px; }
-    .sidebar-card-icon-wrap .card-icon i {display: flex;}
+    .sidebar-card-icon-wrap .card-icon i { display: flex; }
     .sidebar-card-icon-wrap .card-label { font-size: var(--mtt-font-size-xs); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; color: var(--mtt-color-accent); }
-    .sidebar-card-icon-wrap .card-icon .icon-wa {height: 64px !important; width: auto !important;}
-    .sidebar-card-body { padding: var(--mtt-space-6); padding-top: 0;}
-    .sidebar-contact-value { font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); display: flex; align-items: center; gap: var(--mtt-space-3); line-height: var(--mtt-line-height-normal); transition: color var(--mtt-transition); margin-bottom: var(--mtt-space-3); }
-    .sidebar-contact-value i, .sidebar-contact-hours i {display: flex; color: var(--mtt-color-blue);}
-    a.sidebar-contact-value:hover { color: var(--mtt-color-accent); }
-    .sidebar-contact-hours { font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); display: flex; align-items: center; gap: var(--mtt-space-3); line-height: var(--mtt-line-height-normal); }
-    .sidebar-notes-list { display: flex; flex-direction: column; gap: var(--mtt-space-3); }
-    .sidebar-notes-list li { font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); display: flex; align-items: flex-start; gap: var(--mtt-space-3); line-height: var(--mtt-line-height-normal); }
-    .sidebar-notes-list li i { flex-shrink: 0; margin-top: 3px; font-size: var(--mtt-font-size-md); color: var(--mtt-color-accent); }
+    .sidebar-card-body { padding: var(--mtt-space-6); padding-top: 0; }
+    .sidebar-contact-list { display: flex; flex-direction: column; gap: var(--mtt-space-3); margin-bottom: var(--mtt-space-6); }
+    .sidebar-contact-list li { font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); display: flex; align-items: center; gap: var(--mtt-space-3); line-height: var(--mtt-line-height-normal); }
+    .sidebar-contact-list li i { display: flex; color: var(--mtt-color-blue); flex-shrink: 0; }
+    .sidebar-booking-btns { display: flex; flex-direction: column; gap: var(--mtt-space-3); }
+    .btn-book-wa, .btn-book-email { display: flex; align-items: center; justify-content: center; gap: var(--mtt-space-3); border-radius: var(--mtt-radius-pill); padding: 12px 20px; font-size: var(--mtt-font-size-sm); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-btn); text-transform: uppercase; transition: background var(--mtt-transition), color var(--mtt-transition), transform var(--mtt-transition-fast); }
+    .btn-book-wa i, .btn-book-email i { display: flex; font-size: var(--mtt-font-size-lg); }
+    .btn-book-wa { background: var(--mtt-color-whatsapp); color: var(--mtt-color-white); }
+    .btn-book-wa:hover { background: var(--mtt-color-whatsapp-hover); transform: translateY(-1px); }
+    .btn-book-email { background: var(--mtt-color-blue); color: var(--mtt-color-blue-light); }
+    .btn-book-email:hover { background: var(--mtt-color-blue); color: var(--mtt-color-white); transform: translateY(-1px); }
     .sidebar-tips-list { display: flex; flex-direction: column; gap: var(--mtt-space-3); }
     .sidebar-tips-list li { font-size: var(--mtt-font-size-md); color: var(--mtt-color-muted); display: flex; align-items: flex-start; gap: var(--mtt-space-3); line-height: var(--mtt-line-height-normal); }
-    .sidebar-tips-list li i { flex-shrink: 0; margin-top: 3px; font-size: var(--mtt-font-size-md); color: var(--mtt-color-accent); }
-    .main-2col { display: grid; grid-template-columns: 1fr 1fr; gap: var(--mtt-gap-xl); }
-    .tour-extensions-cta { background: var(--mtt-color-white); border: 1px dashed var(--mtt-color-border); border-radius: var(--mtt-radius-lg); padding: var(--mtt-space-10) var(--mtt-space-10); display: flex; align-items: center; justify-content: space-between; gap: var(--mtt-gap-lg); }
-    .tour-extensions-cta-text { flex: 1; }
-    .tour-extensions-cta-text .section-label { margin-bottom: var(--mtt-space-3); }
-    .tour-extensions-cta-text h2 { font-family: var(--mtt-font-title); font-size: var(--mtt-font-size-3xl); color: var(--mtt-color-blue); margin-bottom: var(--mtt-space-3); line-height: var(--mtt-line-height-tight); font-weight: var(--mtt-font-weight-medium); }
-    .tour-extensions-cta-text p { font-size: var(--mtt-font-size-lg); color: var(--mtt-color-muted); line-height: var(--mtt-line-height-relaxed); max-width: 460px; }
-    .tour-extensions-cta-action { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: var(--mtt-space-3); }
-    .btn-ext-main { display: inline-block; padding: 14px 32px; background: var(--mtt-color-blue-light); color: var(--mtt-color-blue); border-radius: var(--mtt-radius-pill); font-size: var(--mtt-font-size-base); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-btn); text-transform: uppercase; border: none; cursor: pointer; box-shadow: var(--mtt-shadow-sm); transition: background var(--mtt-transition), transform var(--mtt-transition-fast); white-space: nowrap; }
-    .btn-ext-main:hover { background: var(--mtt-color-yellow); transform: translateY(-1px); }
-    .ext-note { font-size: var(--mtt-font-size-sm); color: var(--mtt-color-muted); text-align: center; }
+    .sidebar-tips-list li i { flex-shrink: 0; margin-top: 3px; font-size: var(--mtt-font-size-md); color: var(--mtt-color-accent); display: flex; }
+
+    /* ── EXTENSIONS CTA ── */
+    .tour-extensions-cta {
+      position: relative;
+      background: var(--mtt-color-white);
+      border-radius: var(--mtt-radius-lg);
+      border: 1px dashed var(--mtt-color-border);
+      padding: var(--mtt-space-10);
+      padding-left: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--mtt-gap-lg);
+      overflow: hidden; /* hoyos adentro */
+    }
+    /* Desktop: 7 hoyos verticales */
+    .notebook-holes {
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .notebook-hole {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--mtt-color-gray-soft);
+      border: 1px dashed var(--mtt-color-border);
+      flex-shrink: 0;
+    }
+
+    /* Responsive: hoyos arriba */
+    @media (max-width: 1024px) {
+      .tour-extensions-cta {
+        padding-left: var(--mtt-space-6);
+        padding-top: 52px;
+      }
+      .notebook-holes {
+        left: 0;
+        right: 0;
+        top: 14px;
+        bottom: auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+      }
+      /* Muestra todos los hoyos en tablet */
+      .notebook-hole { display: block; }
+    }
+
+    /* Mobile < 768px: menos hoyos para que no se amontonen */
+    @media (max-width: 768px) {
+      .notebook-hole:nth-child(n+8) { display: none; }
+    }
+
+    /* Desktop >1024px: solo 7 hoyos */
+    @media (min-width: 1025px) {
+      .notebook-hole:nth-child(n+8) { display: none; }
+    }
+
+    .tour-extensions-cta-text { flex: 1; display: flex; flex-direction: column; gap: var(--mtt-space-5); }
+    .tour-extensions-cta-text h2 { font-family: var(--mtt-font-title); font-size: var(--mtt-font-size-3xl); color: var(--mtt-color-blue); line-height: var(--mtt-line-height-tight); font-weight: var(--mtt-font-weight-medium); }
+    .tour-extensions-cta-text p { width: 700px; font-size: var(--mtt-font-size-lg); color: var(--mtt-color-muted); line-height: var(--mtt-line-height-relaxed); }
+    .tour-extensions-cta-action { flex-shrink: 0; }
+    .btn-ext-main { display: inline-block; padding: 14px 32px; background: var(--mtt-color-blue); color: var(--mtt-color-blue-light); border-radius: var(--mtt-radius-pill); font-size: var(--mtt-font-size-base); font-weight: var(--mtt-font-weight-bold); line-height: 1; letter-spacing: var(--mtt-letter-spacing-btn); text-transform: uppercase; border: none; cursor: pointer; box-shadow: var(--mtt-shadow-sm); transition: background var(--mtt-transition), transform var(--mtt-transition-fast); white-space: nowrap; }
+    .btn-ext-main:hover { background: var(--mtt-color-blue-light); color: var(--mtt-color-blue); transform: translateY(-1px); }
+    .ext-taped-image { position: relative; flex-shrink: 0; width: 380px; margin-top: 28px; }
+    .ext-taped-image img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--mtt-radius-sm); }
+    .ext-tape { background-color: hsla(0, 0%, 100%, 0.45); box-shadow: inset 0 0 1em .5em hsla(0, 0%, 100%, 0.15); height: 2.4em; position: absolute; top: -20px; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 160px; z-index: 2; filter: drop-shadow(0 1px 0.7px hsla(0,0%,0%,.25)); }
+    .ext-tape::after, .ext-tape::before { background-size: .4em .4em; bottom: 0; content: ''; position: absolute; top: 0; width: .2em; }
+    .ext-tape::after { background-image: linear-gradient(45deg, transparent 50%, hsla(0,0%,100%,.3) 50%), linear-gradient(-45deg, transparent 50%, hsla(0,0%,100%,.3) 50%); background-position: 0 100%; left: -.2em; }
+    .ext-tape::before { background-image: linear-gradient(135deg, transparent 50%, hsla(0,0%,100%,.3) 50%), linear-gradient(-135deg, transparent 50%, hsla(0,0%,100%,.3) 50%); background-position: 100% 100%; right: -.2em; }
+
     .extensions-section { padding: 0 0 var(--mtt-section-py); }
     .extensions-container { max-width: var(--mtt-container-max); margin: 0 auto; padding: 0 var(--mtt-container-px); }
-    .footer-section { padding: var(--mtt-section-py) 0 var(--mtt-gap-lg); background: var(--mtt-color-text); margin-top: var(--mtt-section-py); }
+
+    /* ── FOOTER ── */
+    .footer-section { padding: var(--mtt-section-py) 0 var(--mtt-gap-lg); background: var(--mtt-color-blue); margin-top: var(--mtt-section-py); }
     .footer-container { max-width: var(--mtt-container-max); margin: 0 auto; padding: 0 var(--mtt-container-px); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--mtt-gap-xl); margin-bottom: var(--mtt-gap-xl); }
     .footer-logo { display: flex; align-items: center; gap: var(--mtt-gap-sm); margin-bottom: var(--mtt-gap-md); }
     .footer-logo img { height: 70px; filter: brightness(0) invert(1); }
-    .footer-tagline { font-size: var(--mtt-font-size-base); line-height: var(--mtt-line-height-loose); color: var(--mtt-color-subtle); max-width: 260px; }
+    .footer-tagline { font-size: var(--mtt-font-size-lg); line-height: var(--mtt-line-height-loose); color: rgba(255, 255, 255, 0.92); max-width: 260px; }
     .footer-col h4 { font-size: var(--mtt-font-size-xs); font-weight: var(--mtt-font-weight-bold); letter-spacing: var(--mtt-letter-spacing-label); text-transform: uppercase; color: var(--mtt-color-yellow); margin-bottom: var(--mtt-gap-md); }
     .footer-col ul { display: flex; flex-direction: column; gap: var(--mtt-space-2); }
-    .footer-col li a { font-size: var(--mtt-font-size-base); color: var(--mtt-color-subtle); transition: color var(--mtt-transition); }
+    .footer-col li a { font-size: var(--mtt-font-size-lg); color: rgba(255, 255, 255, 0.92); transition: color var(--mtt-transition); }
     .footer-col li a:hover { color: var(--mtt-color-white); }
-    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: var(--mtt-gap-lg); border-top: 1px solid rgba(255,255,255,0.1); font-size: var(--mtt-font-size-sm); color: var(--mtt-color-subtle); flex-wrap: wrap; gap: var(--mtt-gap-md); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: var(--mtt-gap-lg); border-top: 1px solid rgba(255,255,255,0.1); font-size: var(--mtt-font-size-sm); color: rgba(255, 255, 255, 0.92); flex-wrap: wrap; gap: var(--mtt-gap-md); }
     .footer-links { display: flex; gap: var(--mtt-gap-md); }
-    .footer-links a { color: var(--mtt-color-subtle); }
+    .footer-links a { color: rgba(255, 255, 255, 0.92); }
     .footer-links a:hover { color: var(--mtt-color-white); }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      :root { --mtt-container-px: 32px; --mtt-section-py: 48px; }
+      :root { --mtt-container-px: 24px; --mtt-section-py: 48px; }
       .tour-page-container { grid-template-columns: 1fr; }
       .tour-sidebar { align-self: auto; }
       .sidebar-sticky-wrap { position: static; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--mtt-gap-lg); }
-      .tour-extensions-cta { flex-direction: column; text-align: center; }
-      .tour-extensions-cta-text p { max-width: 100%; }
+      .tour-extensions-cta { flex-direction: column; text-align: center; align-items: center; }
+      .ext-taped-image { width: 100%; max-width: 420px; }
     }
     @media (max-width: 768px) {
       :root { --mtt-gap-xl: 32px; }
       .header-nav, .btn-book { display: none; }
       .mobile-menu-toggle { display: flex; }
-      .tour-title { font-size: var(--mtt-font-size-4xl); }
       .stops-grid { grid-template-columns: 1fr; }
       .main-2col { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .tour-meta-bar { gap: var(--mtt-gap-sm); }
-      .tour-extensions-cta { padding: var(--mtt-space-6); }
+      .tour-extensions-cta { padding: var(--mtt-space-6); padding-top: 66px;}
+      .tour-body-card { padding: var(--mtt-space-6); }
     }
     @media (max-width: 480px) {
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
+
+/* ── TOURS DROPDOWN ── */
+.nav-item { list-style: none; }
+.nav-item > a { font-size: var(--mtt-font-size-2xl); font-weight: var(--mtt-font-weight-semibold); color: var(--mtt-color-gray); padding: var(--mtt-space-1) 0; position: relative; display: flex; align-items: center; gap: 4px; }
+.nav-item > a.active, .nav-item > a:hover { color: var(--mtt-color-accent); }
+.nav-item > a::after { content:''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--mtt-color-yellow); transition: width var(--mtt-transition); }
+.nav-item > a:hover::after, .nav-item > a.active::after { width: 100%; }
+
+.nav-item.has-dropdown { position: relative; }
+.nav-chevron { display: inline-flex; font-size: var(--mtt-font-size-lg); transition: transform 0.2s ease; pointer-events: none; }
+.nav-item.has-dropdown.dd-open > a .nav-chevron { transform: rotate(180deg); }
+
+/* Menú nivel 1 */
+.dd-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--mtt-color-white);
+  border: 1px dashed var(--mtt-color-border);
+  border-radius: var(--mtt-radius-md);
+  min-width: 200px;
+  padding: 6px 0;
+  box-shadow: var(--mtt-shadow-md);
+  z-index: 1000;
+}
+.dd-menu::before {
+  content: '';
+  position: absolute;
+  top: -7px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px; height: 12px;
+  background: var(--mtt-color-white);
+  border-left: 1px dashed var(--mtt-color-border);
+  border-top: 1px dashed var(--mtt-color-border);
+}
+.nav-item.has-dropdown.dd-open > .dd-menu { display: block; }
+
+/* Categoría label */
+.dd-group { position: relative; }
+.dd-label {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 7px 18px;
+  font-size: var(--mtt-font-size-md);
+  font-weight: var(--mtt-font-weight-bold);
+  color: var(--mtt-color-gray);
+  cursor: default;
+  border-radius: var(--mtt-radius-sm);
+  margin: 0 4px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+.dd-label .dd-label-left { display: flex; align-items: center; gap: 7px; }
+
+.dd-label .dd-label-left i { display: flex; }
+.dd-label .dd-label-left::before {
+  content: '✦';
+  font-size: 13px;
+  flex-shrink: 0;
+  line-height: 1;
+  color: var(--mtt-color-yellow);
+}
+.dd-label .dd-arrow { font-size: var(--mtt-font-size-lg); color: var(--mtt-color-accent); transition: transform 0.15s; }
+.dd-group.sub-open > .dd-label { cursor: pointer; color: var(--mtt-color-accent); }
+.dd-group.sub-open > .dd-label .dd-arrow { transform: translateX(2px); }
+
+/* Items */
+.dd-item {
+  display: block;
+  padding: 7px 18px 7px 36px;
+  font-size: var(--mtt-font-size-xl);
+  font-weight: var(--mtt-font-weight-semibold);
+  color: var(--mtt-color-gray);
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.15s, background 0.15s;
+}
+.dd-item::before {
+  content: '✦'; font-size: 7px;
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  color: var(--mtt-color-yellow); opacity: 0; transition: opacity 0.15s;
+}
+.dd-item:hover { color: var(--mtt-color-accent); }
+.dd-item:hover::before { opacity: 1; }
+
+.dd-divider { border: none; border-top: 1px dashed var(--mtt-color-border); margin: 5px 18px; }
+
+/* Sub-menú nivel 2 */
+.dd-submenu {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: calc(100% + 2px);
+  background: var(--mtt-color-white);
+  border: 1px dashed var(--mtt-color-border);
+  border-radius: var(--mtt-radius-md);
+  min-width: 190px;
+  padding: 6px 0;
+  box-shadow: var(--mtt-shadow-md);
+  z-index: 1001;
+}
+.dd-group.sub-open > .dd-submenu { display: block; }
+
+.dd-submenu .dd-item {
+  font-size: var(--mtt-font-size-md);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 18px;        /* igual que .dd-label */
+  border-radius: var(--mtt-radius-sm);
+  margin: 0 4px;
+  font-weight: var(--mtt-font-weight-bold);
+  color: var(--mtt-color-gray);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* Quita el pseudo-elemento anterior (posición absoluta) */
+.dd-submenu .dd-item::before {
+  content: '✦';
+  position: static;
+  transform: none;
+  font-size: 13px;
+  color: var(--mtt-color-yellow);
+  opacity: 1;               /* siempre visible, igual que nivel 1 */
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.dd-submenu .dd-item:hover {
+  color: var(--mtt-color-accent);
+}
+
+.dd-submenu .dd-item::after {
+  content: none;
+}
+
+.dd-submenu::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -7px;
+  transform: rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: var(--mtt-color-white);
+  border-left: 1px dashed var(--mtt-color-border);
+  border-top: 1px dashed var(--mtt-color-border);
+  transform: rotate(-45deg);
+}
+
   </style>
 </head>
 <body>
@@ -531,11 +602,124 @@
       </a>
       <div class="header-right">
         <ul class="header-nav">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#" class="nav-arrow">Tours</a></li>
-          <li><a href="#">Transportation</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+
+          <li class="nav-item has-dropdown" id="navTours">
+            <a href="#">Tours <i class="fi fi-rs-angle-small-down nav-chevron"></i></a>
+            <div class="dd-menu">
+
+              <div class="dd-group" id="ddDayTours">
+                <div class="dd-label">
+                  <span class="dd-label-left">Day Tours</span>
+                  <i class="fi fi-rs-angle-small-right dd-arrow"></i>
+                </div>
+                <div class="dd-submenu">
+                  <a href="#" class="dd-item">San Pedro Sula City Highlights</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Punta Sal National Park</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Cayos Cochinos</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Azul Meambar National Park</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Tela Marine & Beach Fun</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Tela Marine & Botanical Wonders</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Copán Maya Legacy</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Fortress to Forest Adventure</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Lake & Waterfall Escape</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Comayagua Day Tour</a>
+                </div>
+              </div>
+
+              <hr class="dd-divider" />
+
+              <div class="dd-group" id="ddDayTours">
+                <div class="dd-label">
+                  <span class="dd-label-left">Overnight</span>
+                  <i class="fi fi-rs-angle-small-right dd-arrow"></i>
+                </div>
+                <div class="dd-submenu">
+                  <a href="#" class="dd-item">Cayos Cochinos</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Copan Ruins</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Honduran Coffee Origins</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">La Ceiba & Pico Bonito</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Tela & Its Natural Wonders</a>
+                </div>
+              </div>
+
+              <hr class="dd-divider" />
+
+              <div class="dd-group" id="ddDayTours">
+                <div class="dd-label">
+                  <span class="dd-label-left">Journeys</span>
+                  <i class="fi fi-rs-angle-small-right dd-arrow"></i>
+                </div>
+                <div class="dd-submenu">
+                  <a href="#" class="dd-item">Colonial Honduras</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Carribean Honduras</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Highlights of Honduras</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Lenca Heartland</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Nature in Motion</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">The Essence of Honduran Coffee</a>
+                </div>
+              </div>
+
+              <hr class="dd-divider" />
+
+              <div class="dd-group" id="ddDayTours">
+                <div class="dd-label">
+                  <span class="dd-label-left">Horizons</span>
+                  <i class="fi fi-rs-angle-small-right dd-arrow"></i>
+                </div>
+                <div class="dd-submenu">
+                  <a href="#" class="dd-item">Colonial Paths of Honduras & Nicaragua</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Honduras & El Salvador</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Mystic Maya</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">The Maya Civilization</a>
+                </div>
+              </div>
+
+              <hr class="dd-divider" />
+
+              <div class="dd-group" id="ddDayTours">
+                <div class="dd-label">
+                  <span class="dd-label-left">Extensions</span>
+                  <i class="fi fi-rs-angle-small-right dd-arrow"></i>
+                </div>
+                <div class="dd-submenu">
+                  <a href="#" class="dd-item">Cayos Cochinos</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Utila</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Roatán</a>
+                  <hr class="dd-divider" />
+                  <a href="#" class="dd-item">Belize</a>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="#">Transportation</a></li>
+          <li class="nav-item"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="#">Contact Us</a></li>
         </ul>
       </div>
       <button class="mobile-menu-toggle" id="hamburger" aria-label="Open menu">
@@ -557,7 +741,7 @@
       <div class="mobile-nav-drawer-footer">
         <div class="mobile-contact-info">
           <div class="mobile-contact-item"><i class="fi fi-rs-phone-call"></i>(504) 9992-8858</div>
-          <div class="mobile-contact-item"><i class="fi fi-rs-envelope"></i>info@mayatempletours.com</div>
+          <div class="mobile-contact-item"><i class="fi fi-rs-envelope"></i><a href="#">info@mayatempletours.com</a></div>
         </div>
         <div class="mobile-social-row">
           <a href="#" class="topbar-social" aria-label="Facebook"><i class="fi fi-brands-facebook"></i></a>
@@ -568,25 +752,19 @@
     </div>
   </header>
 
-  <!-- ══════════════════════════════════════════
-       HERO CAROUSEL — OPCIÓN 3
-       ══════════════════════════════════════════ -->
+  <!-- ── HERO CAROUSEL ── -->
   <div class="hero-carousel" id="heroCarousel">
-
-    <!-- Slides -->
     <div class="hc-track" id="hcTrack">
 
-      <!-- Slide 1 -->
       <div class="hc-slide active" id="hcSlide0">
         <img src="img/1-03.jpg" alt="Cathedral & Main Square" />
         <div class="hc-content">
           <div class="hc-tag">Day Tour · San Pedro Sula</div>
-          <h1 class="hc-title">San Pedro Sula City Highlights</h1>
+          <h1 class="hc-title">Cathedral & Main Square</h1>
           <p class="hc-caption">Where modern Honduras pulses with energy while honoring its rich past.</p>
         </div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="hc-slide" id="hcSlide1">
         <img src="img/1-02.jpg" alt="Guamilito Arts & Crafts Market" />
         <div class="hc-content">
@@ -596,7 +774,6 @@
         </div>
       </div>
 
-      <!-- Slide 3 -->
       <div class="hc-slide" id="hcSlide2">
         <img src="img/1-04.jpg" alt="Museum of Anthropology & History" />
         <div class="hc-content">
@@ -606,149 +783,198 @@
         </div>
       </div>
 
-    </div><!-- /hc-track -->
+    </div>
 
-    <!-- Flechas -->
-    <button class="hc-arrow hc-arrow-prev" id="hcPrev" aria-label="Previous slide">
-      <i class="fi fi-rs-angle-left"></i>
-    </button>
-    <button class="hc-arrow hc-arrow-next" id="hcNext" aria-label="Next slide">
-      <i class="fi fi-rs-angle-right"></i>
-    </button>
+    <button class="hc-arrow hc-arrow-prev" id="hcPrev" aria-label="Previous slide"><i class="fi fi-rs-angle-left"></i></button>
+    <button class="hc-arrow hc-arrow-next" id="hcNext" aria-label="Next slide"><i class="fi fi-rs-angle-right"></i></button>
 
-    <!-- Barra inferior -->
     <div class="hc-bar">
-
-      <!-- Thumbnails -->
       <div class="hc-thumbs" id="hcThumbs">
-        <div class="hc-thumb active" data-index="0">
-          <img src="img/1-03.jpg" alt="Slide 1" />
-        </div>
-        <div class="hc-thumb" data-index="1">
-          <img src="img/1-02.jpg" alt="Slide 2" />
-        </div>
-        <div class="hc-thumb" data-index="2">
-          <img src="img/1-04.jpg" alt="Slide 3" />
-        </div>
+        <div class="hc-thumb active" data-index="0"><img src="img/1-03.jpg" alt="Slide 1" /></div>
+        <div class="hc-thumb" data-index="1"><img src="img/1-02.jpg" alt="Slide 2" /></div>
+        <div class="hc-thumb" data-index="2"><img src="img/1-04.jpg" alt="Slide 3" /></div>
       </div>
-
       <div class="hc-bar-sep"></div>
-
-      <!-- Counter -->
       <div class="hc-counter">
         <span class="hc-counter-current" id="hcCounterCur">01</span>
         <span class="hc-counter-total" id="hcCounterTotal">/ 03</span>
       </div>
+    </div>
+  </div>
 
-      <div class="hc-bar-sep"></div>
-
-      <!-- Progress autoplay -->
-      <div class="hc-progress-wrap">
-        <span class="hc-progress-label">Autoplay</span>
-        <div class="hc-progress-track">
-          <div class="hc-progress-fill" id="hcProgressFill"></div>
-        </div>
-      </div>
-
-      <!-- Pausa pill -->
-      <div class="hc-pause-pill" id="hcPausePill">
-        <i class="fi fi-rs-pause"></i> Paused
-      </div>
-
-    </div><!-- /hc-bar -->
-
-  </div><!-- /hero-carousel -->
-
-  <!-- MAIN CONTENT (idéntico) -->
+  <!-- ── MAIN CONTENT ── -->
   <section class="tour-page-section">
     <div class="tour-page-container">
       <main class="tour-content">
-        <div class="tour-title-block">
-          <span class="tour-category-tag">Day Tour ✦ San Pedro Sula</span>
-          <h1 class="tour-title">San Pedro Sula City Highlights</h1>
-          <p class="tour-tagline">San Pedro Sula isn't just a city — it's where modern Honduras pulses with energy while honoring its rich past. From a grand cathedral to a bustling market overflowing with handcrafted treasures, this tour reveals the soul of Honduras' industrial capital.</p>
-          <div class="tour-meta-bar">
-            <div class="meta-item"><span><strong>✦ Duration:</strong> 4 Hours</span></div>
-            <div class="meta-item"><span><strong>✦ Departures:</strong> 9:00 am &amp; 2:00 pm</span></div>
+
+        <!-- POSTCARD -->
+        <div class="postcard">
+          <div class="postcard-border"></div>
+          <div class="postcard-inner">
+            <div class="pc-left">
+              <div class="badge">✦ Day Tour &nbsp;·&nbsp; San Pedro Sula</div>
+              <h1 class="pc-title">San Pedro Sula City Highlights</h1>
+              <div class="pc-lines-wrap">
+                <p class="pc-line-text">San Pedro Sula isn't just a city — it's where modern Honduras pulses with energy while honoring its rich past. From a grand cathedral to a bustling market overflowing with handcrafted treasures, this tour reveals the soul of Honduras' industrial capital.</p>
+              </div>
+            </div>
+            <div class="pc-divider"></div>
+            <div class="pc-right">
+              <div class="pc-stamp">
+                <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="pattern-x" width="0.1" height="1" viewBox="0 0 10 10"><circle cx="5" cy="0" r="4"></circle></pattern>
+                    <pattern id="pattern-y" width="1" height="0.072" viewBox="0 0 10 10"><circle cx="0" cy="5" r="4"></circle></pattern>
+                    <mask id="mask-rect">
+                      <rect x="0" y="0" width="100" height="130" fill="#fff"></rect>
+                      <rect id="x" x="2.5" y="0" width="95" height="8" fill="url(#pattern-x)"></rect>
+                      <use href="#x" transform="translate(0 130) scale(1 -1)"></use>
+                      <rect id="y" x="0" y="2.5" width="8" height="125" fill="url(#pattern-y)"></rect>
+                      <use href="#y" transform="translate(100 0) scale(-1 1)"></use>
+                    </mask>
+                  </defs>
+                  <g>
+                    <rect x="0" y="0" width="100" height="130" fill="#E8E8E8" mask="url(#mask-rect)"></rect>
+                    <rect x="8" y="8" width="84" height="88" fill="#cacbcc"></rect>
+                    <image href="img/postal-gris.png" x="8" y="8" width="84" height="84" preserveAspectRatio="xMidYMid meet"/>
+                    <rect x="8" y="96" width="84" height="26" fill="#ffffff"></rect>
+                    <g transform="translate(10 106)" fill="#cacbcc">
+                      <text font-size="7" style="font-weight: 900;">HONDURAS</text>
+                      <text y="9" font-size="5.5" style="font-weight: 300;">Tours &amp; Destinos</text>
+                      <text fill="#cacbcc" x="80" y="9" font-size="18" text-anchor="end" style="font-weight: 900; letter-spacing: -0.05rem;">HN</text>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="pc-info-blocks">
+                <div class="pc-info-block">
+                  <div class="pc-info-label">✦ Duration:</div>
+                  <div class="pc-info-rule"><span class="pc-info-value">4 Hours</span></div>
+                </div>
+                <div class="pc-info-block">
+                  <div class="pc-info-label">✦ Departures:</div>
+                  <div class="pc-info-rule"><span class="pc-info-value">9:00 am &amp; 2:00 pm</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pc-brand-stamp">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+                <circle cx="60" cy="60" r="52" fill="none" stroke="#000" stroke-width="1"/>
+                <defs>
+                  <path id="brandCircle" d="M 60,60 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
+                  <clipPath id="iconClip"><circle cx="60" cy="60" r="30"/></clipPath>
+                  <filter id="grayStamp">
+                    <feColorMatrix type="saturate" values="0"/>
+                    <feComponentTransfer>
+                      <feFuncR type="linear" slope="0.79" intercept="0"/>
+                      <feFuncG type="linear" slope="0.79" intercept="0"/>
+                      <feFuncB type="linear" slope="0.79" intercept="0"/>
+                    </feComponentTransfer>
+                  </filter>
+                </defs>
+                <image href="img/icono-negro.png" x="30" y="30" width="60" height="60" clip-path="url(#iconClip)" preserveAspectRatio="xMidYMid meet" filter="url(#grayStamp)"/>
+                <text font-size="8" fill="#000" font-weight="700" letter-spacing="5.8" font-family="'Andes Black', sans-serif">
+                  <textPath href="#brandCircle" startOffset="0%">MAYA TEMPLE TOURS · 504 ·</textPath>
+                </text>
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="tour-stops-block">
-          <p class="section-label">What You'll Experience</p>
-          <div class="stops-grid">
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-church"></i></div>
-              <h3><strong>Cathedral</strong> &amp; Main Square</h3>
-              <p>Stand in the shadow of architectural grandeur where locals gather and history echoes through ancient stones.</p>
-            </div>
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-museum"></i></div>
-              <h3><strong>Museum</strong> of Anthropology &amp; History</h3>
-              <p>Journey through millenia as expert curators unveil the story of Honduras, from pre-Columbian civilizations to the present day.</p>
-            </div>
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-palette"></i></div>
-              <h3><strong>Guamilito</strong> Arts &amp; Crafts Market</h3>
-              <p>Lose yourself in a kaleidoscope of colors, where master artisans showcase generations of tradition in textiles, ceramics, and woodwork.</p>
-            </div>
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-mug-hot"></i></div>
-              <h3><strong>Authentic</strong> Flavors</h3>
-              <p>Savor the rich complexity of Honduran chocolate or sip freshly brewed local coffee — each taste tells a story of the land.</p>
-            </div>
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-city"></i></div>
-              <h3><strong>Urban</strong> Exploration</h3>
-              <p>Wind through vibrant commercial districts and peaceful residential neighborhoods, seeing how San Pedro Sula lives and breathes.</p>
-            </div>
-            <div class="stop-card">
-              <div class="stop-card-icon"><i class="fi fi-rs-bus"></i></div>
-              <h3><strong>Complete</strong> Comfort</h3>
-              <p>Professional tour escort, air-conditioned transportation, and all entrance fees covered — just bring your curiosity.</p>
+
+        <!-- ── TOUR BODY CARD — contenedor blanco unificado ── -->
+        <div class="tour-body-card">
+
+          <!-- What You'll Experience -->
+          <div class="tour-body-section">
+            <p class="section-label-lg">What You'll Experience</p>
+            <div class="stops-grid">
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-church"></i></div>
+                <h3><strong>Cathedral</strong> &amp; Main Square</h3>
+                <p>Stand in the shadow of architectural grandeur where locals gather and history echoes through ancient stones.</p>
+              </div>
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-museum"></i></div>
+                <h3><strong>Museum</strong> of Anthropology &amp; History</h3>
+                <p>Journey through millenia as expert curators unveil the story of Honduras, from pre-Columbian civilizations to the present day.</p>
+              </div>
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-palette"></i></div>
+                <h3><strong>Guamilito</strong> Arts &amp; Crafts Market</h3>
+                <p>Lose yourself in a kaleidoscope of colors, where master artisans showcase generations of tradition in textiles, ceramics, and woodwork.</p>
+              </div>
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-mug-hot"></i></div>
+                <h3><strong>Authentic</strong> Flavors</h3>
+                <p>Savor the rich complexity of Honduran chocolate or sip freshly brewed local coffee — each taste tells a story of the land.</p>
+              </div>
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-city"></i></div>
+                <h3><strong>Urban</strong> Exploration</h3>
+                <p>Wind through vibrant commercial districts and peaceful residential neighborhoods, seeing how San Pedro Sula lives and breathes.</p>
+              </div>
+              <div class="stop-card">
+                <div class="stop-card-icon"><i class="fi fi-rs-bus"></i></div>
+                <h3><strong>Complete</strong> Comfort</h3>
+                <p>Professional tour escort, air-conditioned transportation, and all entrance fees covered — just bring your curiosity.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <hr class="content-divider" />
-        <div class="main-2col" id="includes">
-          <div>
-            <p class="section-label">Inclusions</p>
-            <ul class="info-list">
-              <li><i class="fi fi-rs-angle-right"></i>Professional tour escort</li>
-              <li><i class="fi fi-rs-angle-right"></i>Air-conditioned transportation</li>
-              <li><i class="fi fi-rs-angle-right"></i>All entrance fees to sites in the itinerary</li>
-              <li><i class="fi fi-rs-angle-right"></i>Tastings of local chocolate and/or coffee</li>
-            </ul>
+
+          <!-- Inclusions & Optional Expenses -->
+          <div class="tour-body-section" id="includes">
+            <div class="main-2col">
+              <div>
+                <p class="section-label-lg">Inclusions</p>
+                <ul class="info-list">
+                  <li><i class="fi fi-rs-angle-right"></i>Professional tour escort</li>
+                  <li><i class="fi fi-rs-angle-right"></i>Air-conditioned transportation</li>
+                  <li><i class="fi fi-rs-angle-right"></i>All entrance fees</li>
+                  <li><i class="fi fi-rs-angle-right"></i>Tastings of local chocolate/coffee</li>
+                </ul>
+              </div>
+              <div>
+                <p class="section-label-lg">Optional Expenses</p>
+                <ul class="info-list">
+                  <li><i class="fi fi-rs-angle-right"></i>Driver gratuities</li>
+                  <li><i class="fi fi-rs-angle-right"></i>Travel insurance</li>
+                  <li><i class="fi fi-rs-angle-right"></i>Personal meals beyond tastings</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div>
-            <p class="section-label">Optional Expenses</p>
-            <p style="font-size:var(--mtt-font-size-md);color:var(--mtt-color-muted);line-height:var(--mtt-line-height-relaxed);">Driver gratuities, travel insurance, personal meals beyond tastings.</p>
-          </div>
-        </div>
+
+        </div><!-- /tour-body-card -->
+
       </main>
 
-      <aside class="tour-sidebar" style="align-self:start;">
+      <!-- ── SIDEBAR ── -->
+      <aside class="tour-sidebar">
         <div class="sidebar-sticky-wrap">
+
           <div class="sidebar-card">
             <div class="sidebar-card-icon-wrap">
-              <div class="card-icon">
-                <a href="https://wa.me/50494520238">
-                  <img src="icon-whatsapp.png" class="icon-wa" alt=""></div>
+              <div class="card-icon"><i class="fi fi-rs-headset"></i></div>
+              <span class="card-label">Contact Information</span>
+            </div>
+            <div class="sidebar-card-body">
+              <ul class="sidebar-contact-list">
+                <li><i class="fi fi-rs-phone-call"></i> +(504) 9452-0238</li>
+                <li><i class="fi fi-rs-clock-three"></i> Mon–Fri ~ 9:00 am to 5:00 pm</li>
+                <li><i class="fi fi-rs-at"></i> <a href="mailto:info@mayatempletours.com">info@mayatempletours.com</a></li>
+              </ul>
+              <div class="sidebar-booking-btns">
+                <a href="https://wa.me/50494520238" class="btn-book-wa">
+                  <i class="fi fi-brands-whatsapp"></i>Book by WhatsApp
                 </a>
-              <span class="card-label">Book by WhatsApp</span>
-            </div>
-            <div class="sidebar-card-body" style="text-align:center;">
-              <a href="https://wa.me/50494520238" class="sidebar-contact-value"><i class="fi fi-rs-phone-call"></i> +(504) 9452-0238</a>
-              <p class="sidebar-contact-hours"><i class="fi fi-rs-clock-three"></i> Mon – Fri &nbsp;9:00 am to 5:00 pm</p>
-            </div>
-          </div>
-          <div class="sidebar-card">
-            <div class="sidebar-card-icon-wrap">
-              <div class="card-icon"><i class="fi fi-rs-envelope"></i></div>
-              <span class="card-label">Book by Email</span>
-            </div>
-            <div class="sidebar-card-body" style="text-align:center;">
-              <a href="mailto:info@mayatempletours.com" class="sidebar-contact-value" style="font-size:var(--mtt-font-size-lg);"><i class="fi fi-rs-at"></i> info@mayatempletours.com</a>
+                <a href="mailto:info@mayatempletours.com" class="btn-book-email">
+                  <i class="fi fi-rs-envelope"></i>Book by Email
+                </a>
+              </div>
             </div>
           </div>
+
           <div class="sidebar-card">
             <div class="sidebar-card-icon-wrap">
               <div class="card-icon"><i class="fi fi-rs-info"></i></div>
@@ -764,76 +990,86 @@
               </ul>
             </div>
           </div>
-          <div class="sidebar-card">
-            <div class="sidebar-card-icon-wrap">
-              <div class="card-icon"><i class="fi fi-rs-notebook"></i></div>
-              <span class="card-label">Notes</span>
-            </div>
-            <div class="sidebar-card-body">
-              <ul class="sidebar-notes-list">
-                <li><i class="fi fi-rs-drawer-alt"></i>Group rates available.</li>
-                <li><i class="fi fi-rs-drawer-alt"></i>Single traveler? Please inquire.</li>
-              </ul>
-            </div>
-          </div>
+
         </div>
       </aside>
     </div>
   </section>
 
+  <!-- ── EXTENSIONS CTA ── -->
   <section class="extensions-section">
     <div class="extensions-container">
       <div class="tour-extensions-cta">
+        <div class="notebook-holes">
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+          <div class="notebook-hole"></div>
+        </div>
+        <!-- resto del contenido igual -->
         <div class="tour-extensions-cta-text">
-          <span class="tour-category-tag">Extend Your Adventure</span>
           <h2>Want More Time to Explore?</h2>
           <p>Your tour doesn't have to end here. If you'd like to keep discovering Honduras after the city highlights, we offer a wide selection of extensions — from Caribbean beach getaways to jungle adventures and ancient ruins. Ask us and we'll tailor the perfect continuation for you.</p>
+          <div class="tour-extensions-cta-action">
+            <a href=""><span class="btn-ext-main">Extend Your Adventure</span></a>
+          </div>
         </div>
-        <div class="tour-extensions-cta-action">
-          <a href="mailto:info@mayatempletours.com" class="btn-ext-main">See Tour Extensions</a>
-          <span class="ext-note">Group &amp; private options available</span>
+        <div class="ext-taped-image">
+          <div class="ext-tape"></div>
+          <img src="img/1-02.jpg" alt="Extend your adventure" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ── FOOTER ── -->
   <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo"><img src="mayatempletours-logo.png" alt=""></div>
+          <div class="footer-logo"><img src="mayatempletours-logo.png" alt="Maya Temple Tours"></div>
           <p class="footer-tagline">Discover Honduras and Central America with professional, bilingual guides. Cultural history, Caribbean beaches, and jungle adventures — all in one trip.</p>
         </div>
         <div class="footer-col">
           <h4>Tours</h4>
           <ul>
-            <li><a href="#">San Pedro Sula City Highlights</a></li>
-            <li><a href="#">Isla Maya Getaway</a></li>
-            <li><a href="#">La Ceiba &amp; Pico Bonito</a></li>
-            <li><a href="#">Copán Day Trip</a></li>
-            <li><a href="#">All Tours</a></li>
+            <li><a href="#">✦ San Pedro Sula City Highlights</a></li>
+            <li><a href="#">✦ Isla Maya Getaway</a></li>
+            <li><a href="#">✦ La Ceiba &amp; Pico Bonito</a></li>
+            <li><a href="#">✦ Copán Day Trip</a></li>
+            <li><a href="#">✦ All Tours</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Transportation</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">✦ About Us</a></li>
+            <li><a href="#">✦ Services</a></li>
+            <li><a href="#">✦ Transportation</a></li>
+            <li><a href="#">✦ Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Get in Touch</h4>
           <ul>
-            <li><a href="tel:+50499928858">(504) 9992-8858</a></li>
-            <li><a href="mailto:info@mayatempletours.com">info@mayatempletours.com</a></li>
-            <li><a href="#">Mon–Fri 9am–5pm</a></li>
+            <li><a href="tel:+50499928858">✦ +(504) 9452-0238</a></li>
+            <li><a href="mailto:info@mayatempletours.com">✦ info@mayatempletours.com</a></li>
+            <li><a href="#">✦ Mon – Fri  9:00 am to 5:00 pm</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Maya Temple Tours. All rights reserved.</span>
+        <span>© 2026 Maya Temple Tours. All rights reserved.</span>
         <div class="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms &amp; Conditions</a>
@@ -843,7 +1079,6 @@
   </footer>
 
   <script>
-    // ── Mobile drawer ──
     const hamburger   = document.getElementById('hamburger');
     const drawer      = document.getElementById('mobileDrawer');
     const drawerClose = document.getElementById('drawerClose');
@@ -853,119 +1088,97 @@
       link.addEventListener('click', () => { drawer.classList.remove('open'); document.body.style.overflow = ''; });
     });
 
-    // ── Hero Carousel ──
     const SLIDES       = document.querySelectorAll('.hc-slide');
     const THUMBS       = document.querySelectorAll('.hc-thumb');
     const track        = document.getElementById('hcTrack');
     const counterCur   = document.getElementById('hcCounterCur');
     const counterTotal = document.getElementById('hcCounterTotal');
-    const progressFill = document.getElementById('hcProgressFill');
-    const pausePill    = document.getElementById('hcPausePill');
     const carousel     = document.getElementById('heroCarousel');
-
     const TOTAL        = SLIDES.length;
     const AUTOPLAY_MS  = 5000;
     let current        = 0;
     let autoplayTimer  = null;
-    let progressTimer  = null;
-    let isPaused       = false;
 
     counterTotal.textContent = '/ ' + String(TOTAL).padStart(2, '0');
 
     function goTo(idx) {
-      // Deactivate current
       SLIDES[current].classList.remove('active');
       THUMBS[current].classList.remove('active');
-
       current = (idx + TOTAL) % TOTAL;
-
-      // Activate new
       SLIDES[current].classList.add('active');
       THUMBS[current].classList.add('active');
       track.style.transform = `translateX(-${current * 100}%)`;
       counterCur.textContent = String(current + 1).padStart(2, '0');
     }
 
-    function startProgress() {
-      progressFill.style.transition = 'none';
-      progressFill.style.width = '0%';
-      // Force reflow
-      progressFill.getBoundingClientRect();
-      progressFill.style.transition = `width ${AUTOPLAY_MS}ms linear`;
-      progressFill.style.width = '100%';
-    }
+    function startAutoplay() { clearInterval(autoplayTimer); autoplayTimer = setInterval(() => { goTo(current + 1); }, AUTOPLAY_MS); }
+    function stopAutoplay()  { clearInterval(autoplayTimer); }
 
-    function startAutoplay() {
-      clearInterval(autoplayTimer);
-      startProgress();
-      autoplayTimer = setInterval(() => {
-        goTo(current + 1);
-        startProgress();
-      }, AUTOPLAY_MS);
-    }
+    document.getElementById('hcPrev').addEventListener('click', () => { goTo(current - 1); });
+    document.getElementById('hcNext').addEventListener('click', () => { goTo(current + 1); });
+    THUMBS.forEach(thumb => { thumb.addEventListener('click', () => { goTo(parseInt(thumb.dataset.index)); }); });
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
 
-    function stopAutoplay() {
-      clearInterval(autoplayTimer);
-      // Freeze progress bar at current width
-      const computed = getComputedStyle(progressFill).width;
-      const trackW   = progressFill.parentElement.offsetWidth;
-      const pct      = (parseFloat(computed) / trackW) * 100;
-      progressFill.style.transition = 'none';
-      progressFill.style.width = pct + '%';
-    }
-
-    // Flechas
-    document.getElementById('hcPrev').addEventListener('click', () => {
-      goTo(current - 1);
-      if (!isPaused) startProgress();
-    });
-    document.getElementById('hcNext').addEventListener('click', () => {
-      goTo(current + 1);
-      if (!isPaused) startProgress();
-    });
-
-    // Thumbnails
-    THUMBS.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        goTo(parseInt(thumb.dataset.index));
-        if (!isPaused) startProgress();
-      });
-    });
-
-    // Pausa al hover sobre el carousel
-    carousel.addEventListener('mouseenter', () => {
-      isPaused = true;
-      stopAutoplay();
-      pausePill.classList.add('visible');
-    });
-    carousel.addEventListener('mouseleave', () => {
-      isPaused = false;
-      pausePill.classList.remove('visible');
-      startAutoplay();
-    });
-
-    // Swipe táctil
     let touchStartX = null;
     carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
     carousel.addEventListener('touchend', e => {
       if (touchStartX === null) return;
       const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 50) {
-        goTo(dx < 0 ? current + 1 : current - 1);
-        if (!isPaused) startProgress();
-      }
+      if (Math.abs(dx) > 50) { goTo(dx < 0 ? current + 1 : current - 1); }
       touchStartX = null;
     });
 
-    // Keyboard
     document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowLeft')  { goTo(current - 1); if (!isPaused) startProgress(); }
-      if (e.key === 'ArrowRight') { goTo(current + 1); if (!isPaused) startProgress(); }
+      if (e.key === 'ArrowLeft')  goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
     });
 
-    // Init
     startAutoplay();
   </script>
+
+
+  <script>
+  // ── DROPDOWN MENU ──
+  (function () {
+    // Abre/cierra el menú principal al hacer hover en el li
+    const dropdowns = document.querySelectorAll('.nav-item.has-dropdown');
+    dropdowns.forEach(function (dd) {
+      var timer;
+      dd.addEventListener('mouseenter', function () {
+        clearTimeout(timer);
+        dd.classList.add('dd-open');
+      });
+      dd.addEventListener('mouseleave', function () {
+        timer = setTimeout(function () { dd.classList.remove('dd-open'); }, 80);
+      });
+    });
+
+    // Abre/cierra el sub-menú al hacer hover en el dd-group
+    const groups = document.querySelectorAll('.dd-group');
+    groups.forEach(function (g) {
+      var sub = g.querySelector('.dd-submenu');
+      if (!sub) return; // si no tiene sub-menú, ignorar
+      var timer;
+      g.addEventListener('mouseenter', function () {
+        clearTimeout(timer);
+        // Cierra otros grupos del mismo menú
+        g.closest('.dd-menu').querySelectorAll('.dd-group.sub-open').forEach(function (o) {
+          if (o !== g) o.classList.remove('sub-open');
+        });
+        g.classList.add('sub-open');
+      });
+      g.addEventListener('mouseleave', function () {
+        timer = setTimeout(function () { g.classList.remove('sub-open'); }, 80);
+      });
+      // Mantener abierto cuando el mouse entra al sub-menú
+      sub.addEventListener('mouseenter', function () { clearTimeout(timer); g.classList.add('sub-open'); });
+      sub.addEventListener('mouseleave', function () {
+        timer = setTimeout(function () { g.classList.remove('sub-open'); }, 80);
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
